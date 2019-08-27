@@ -12,17 +12,30 @@ public class LineItem {
         this.qty = qty;
     }
 
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
     public String getDescription() {
         return desc;
+    }
+
+    public void setP(double p) {
+        this.p = p;
     }
 
     public double getPrice() {
         return p;
     }
 
+    public void setQty(int qty) {
+        this.qty = qty;
+    }
+
     public int getQuantity() {
         return qty;
     }
+
 
    public double totalAmount() {
         return p * qty;
