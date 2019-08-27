@@ -4,38 +4,38 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    private String nm;
-    private String addr;
-    private List<LineItem> li;
+    private String CustomerName;
+    private String CustomerAddress;
+    private List<LineItem> lineItems;
 
-    public Order(String nm, String addr, List<LineItem> li) {
-        this.nm = nm;
-        this.addr = addr;
-        this.li = li;
-    }
-
-    public void setNm(String nm) {
-        this.nm = nm;
+    public Order(String customerName, String customerAddress, List<LineItem> lineItems) {
+        CustomerName = customerName;
+        CustomerAddress = customerAddress;
+        this.lineItems = lineItems;
     }
 
     public String getCustomerName() {
-        return nm;
+        return CustomerName;
     }
 
-    public void setAddr(String addr) {
-        this.addr = addr;
+    public void setCustomerName(String customerName) {
+        CustomerName = customerName;
     }
 
     public String getCustomerAddress() {
-        return addr;
+        return CustomerAddress;
     }
 
-    public void addLi(List<LineItem> li) {
-        this.li.addAll(li);
+    public void setCustomerAddress(String customerAddress) {
+        CustomerAddress = customerAddress;
+    }
+
+    public void addLineItems(List<LineItem> lineItems) {
+        this.lineItems.addAll(lineItems);
     }
 
     public List<LineItem> getLineItems() {
-        ArrayList<LineItem> lineItems = (ArrayList<LineItem>) li;
+        ArrayList<LineItem> itemsList = (ArrayList<LineItem>) lineItems;
         return lineItems;
     }
 }
